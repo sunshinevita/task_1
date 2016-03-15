@@ -1,0 +1,141 @@
+body,ul,li,div,p,ol,dl,h1,h2,h3,h4,h5,h6{padding:0;margin:0;border:none;}
+ul li{list-style: none;}
+/*清除浮动*/
+.clearfix:after,.clearfix:before{content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { *zoom:1; }
+/*main css样式*/
+.container{
+	background-color: #eee;
+	padding: 20px;
+	border: 1px solid #999;
+}
+.container .left,.container .center,.container .right{
+	padding: 20px;	
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+/*position绝对定位*/
+#container-1{
+	    	position: relative;
+}
+
+/*左侧*/
+#container-1 .left{
+	position: absolute;
+	top:20px;
+	left: 20px;
+
+	width: 158px;
+}
+/*中间自适应*/
+#container-1 .center{
+	margin-left: 220px;
+	margin-right: 140px;
+	height: 600px;
+}
+/*右侧*/
+#container-1 .right{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+
+	width: 78px;
+	text-align: center;
+}
+
+
+/*float浮动定位法*/
+
+/*左侧*/
+#container-2 .left{
+	float: left;
+
+	width: 158px;
+}
+/*右侧*/
+#container-2 .right{
+	float: right;
+
+	width: 78px;
+	text-align: center;
+}
+/*中间*/
+#container-2 .center{
+	margin-left: 220px;
+	margin-right: 140px;
+}
+
+/*结合float 和margin的左右负边距*/
+
+/*中间*/
+#container-3 .center-box{
+	margin:0;
+    padding:0;
+	width: 100%;
+	float: left;
+}
+#container-3 .center{
+	margin-left: 220px;
+	margin-right: 140px;
+}
+/*左侧*/
+#container-3 .left{
+	float: left;
+
+	width: 158px;
+	margin-left:-100%;
+
+}
+/*右侧*/
+#container-3 .right{
+	float: left;
+
+	width: 78px;
+	margin-left:-120px;
+	text-align: center;
+}
+
+
+
+
+/*左侧内容样式*/
+.left>.logo{
+	width: 80px;
+	height: 80px;
+	vertical-align: top;
+}
+.left>span{
+	margin-left: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #e11a49;
+}
+
+/*中间自适应内容样式*/
+.center>h2{
+	line-height: 60px;
+}
+.center>.team-member dt{
+	font-weight: bold;
+    line-height: 40px;
+}
+/*右侧内容样式*/
+.right>img{
+	width: 80px;
+	height: 80px;
+}
+.right>span{
+      display: block;
+      margin: 10px 0;
+}
+
+/*总结*/
+.note{
+	margin: 40px 40px;
+	border: 1px solid #999;
+	padding: 20px;
+}
+.note .note-name{
+	color: red;
+}

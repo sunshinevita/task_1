@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三栏布局</title>
+	<link rel="stylesheet" type="text/css" href="css/task_1_3.css">
+</head>
+<body>
+	<div class="note">
+		<h1>1、【绝对定位法】</h1>
+		<span class="note-name">使用position属性的关键点</span>：
+		<ul>
+		    <li>1、父元素使用相对定位，（position：relative）左右栏绝对定位从普通文档流中脱离出来，中间元素可以不用考虑左右定位元素占的位置</li>
+		    <li>2、左右栏绝对定位到确定的位置上，（position：absolute，left，right）</li>
+		    <li>3、中间栏左右外边距设置为左右栏的宽度，因此自身宽度不设置（千万不要设置width:100%;）就自适应的变成了窗口宽度-左右两边栏的宽度</li>
+		</ul>
+		<span class="note-name">使用position属性的缺点</span>：使用position属性时，由于子元素使用了绝对定位，所以如果使用绝对定位的子元素的高度大于其他没有使用绝对定位的子元素，父元素的高度不能自适应使用了绝对定位的子元素的高度
+	</div>
+
+	<div id="container-1" class="container">
+		<div class="left">
+			<img class="logo" src="images/logo.png">
+			<span>小刀</span>
+		</div>
+		<div class="center">
+			<h1 class="team-name">小刀</h1>
+			<h2>团队名称来源</h2>
+			    <p>希望我们团队像小刀一样，在前端学习的道路上将我们的前端技能磨练得越来强大，越来越锋利,fightting!!!!!!</p>
+			<h2>团队成员</h2>
+			<dl class="team-member">
+			    <dt>刘培林</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>彭家钊</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>靳思雨</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>孙肖旭</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>张小玲</dt>
+			    <dd>学校：西南民族大学；专业：信息管理与信息系统；爱好：动漫与小说</dd>
+			</dl>
+		</div>
+		<div class="right">
+			<img src="images/roll.png">
+			<span>刘培林</span>
+			<img src="images/roll.png">
+			<span>彭家钊</span>
+			<img src="images/jsy.png">
+			<span>靳思雨</span>
+			<img src="images/sxx.png">
+			<span>孙肖旭</span>
+			<img src="images/zhxl.png">
+			<span>张小玲</span>
+		</div>
+	</div>
+
+    <div class="note">
+		<h1>2、【浮动定位法】</h1>
+		<span class="note-name">使用float属性的关键点</span>：
+		<ul>
+		    <li>1、对左栏设置向左浮动、对右栏设置向右浮动（三个div的位置为 左栏、右栏、中间栏）</li>
+		    <li>2、中间栏左右外边距设置为左右栏的宽度，因此自身宽度不设置（千万不要设置width:100%;）就自适应的变成了窗口宽度-左右两边栏的宽度</li>
+		    <li>3、对父元素清除浮动，让父元素的高度为子元素的最高高度</li>
+		</ul>
+		<span class="note-name">使用float属性的缺点</span>：子元素使用float属性时，会造成父元素的高度塌陷，要对父元素清除浮动影响，要注意先渲染左右浮动模块，再渲染中间自适应模块
+	</div>
+
+	<div id="container-2" class="container clearfix">
+		<div class="left">
+			<img class="logo" src="images/logo.png">
+			<span>小刀</span>
+		</div>
+		<div class="right">
+			<img src="images/roll.png">
+			<span>刘培林</span>
+			<img src="images/roll.png">
+			<span>彭家钊</span>
+			<img src="images/jsy.png">
+			<span>靳思雨</span>
+			<img src="images/sxx.png">
+			<span>孙肖旭</span>
+			<img src="images/zhxl.png">
+			<span>张小玲</span>
+		</div>
+		<div class="center">
+			<h1 class="team-name">小刀</h1>
+			<h2>团队名称来源</h2>
+			    <p>希望我们团队像小刀一样，在前端学习的道路上将我们的前端技能磨练得越来强大，越来越锋利,fightting!!!!!!</p>
+			<h2>团队成员</h2>
+			<dl class="team-member">
+			    <dt>刘培林</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>彭家钊</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>靳思雨</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>孙肖旭</dt>
+			    <dd>学校：.......；专业：.....；爱好：......</dd>
+			    <dt>张小玲</dt>
+			    <dd>学校：西南民族大学；专业：信息管理与信息系统；爱好：动漫与小说</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="note">
+		<h1>3、【负外边距法】</h1>
+		<span class="note-name">使用margin负外边距属性的关键点</span>：
+		<ul>
+		    <li>1、中间栏由里外两层构成，外层撑起整个内容区域，内层进行中间栏的布局，设置内层的左右外边距给左右栏留出空间</li>
+		    <li>2、左右栏向左浮动并设置负的外边距浮动到相应位置</li>
+		    <li>3、中间栏先于左右栏定位(float：left)（三个div的位置顺序一定是中间栏在前）</li>
+		</ul>
+		<span class="note-name">使用margin负外边距属性的缺点</span>：
+		需要对中间栏多嵌套一层div,且需要对父元素清除浮动
+	</div>
+
+	<div id="container-3" class="container clearfix">
+		<div class="center-box">
+		    <div class="center">
+				<h1 class="team-name">小刀</h1>
+				<h2>团队名称来源</h2>
+				    <p>希望我们团队像小刀一样，在前端学习的道路上将我们的前端技能磨练得越来强大，越来越锋利,fightting!!!!!!</p>
+				<h2>团队成员</h2>
+				<dl class="team-member">
+				    <dt>刘培林</dt>
+				    <dd>学校：.......；专业：.....；爱好：......</dd>
+				    <dt>彭家钊</dt>
+				    <dd>学校：.......；专业：.....；爱好：......</dd>
+				    <dt>靳思雨</dt>
+				    <dd>学校：.......；专业：.....；爱好：......</dd>
+				    <dt>孙肖旭</dt>
+				    <dd>学校：.......；专业：.....；爱好：......</dd>
+				    <dt>张小玲</dt>
+				    <dd>学校：西南民族大学；专业：信息管理与信息系统；爱好：动漫与小说</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="left">
+			<img class="logo" src="images/logo.png">
+			<span>小刀</span>
+		</div>
+		<div class="right">
+			<img src="images/roll.png">
+			<span>刘培林</span>
+			<img src="images/roll.png">
+			<span>彭家钊</span>
+			<img src="images/jsy.png">
+			<span>靳思雨</span>
+			<img src="images/sxx.png">
+			<span>孙肖旭</span>
+			<img src="images/zhxl.png">
+			<span>张小玲</span>
+		</div>
+		
+	</div>
+</body>
+</html>
