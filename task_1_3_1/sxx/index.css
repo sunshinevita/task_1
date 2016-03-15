@@ -1,0 +1,56 @@
+body,h2{
+	margin:0px;
+	padding: 0px;
+}
+.clearfix{
+	overflow: auto;
+}
+.body{
+	height: auto;
+	background-color: #eee;
+	border: 1px solid #999;
+	margin:20px;
+	padding: 20px;
+}
+.body img{
+	width: 80px;
+	height: 80px;
+	border:1px solid #999;
+}
+/* ===================team_logo================== */
+.team_logo{
+	width: 160px;
+	float: left;
+	padding: 20px;
+	background-color: white;
+	border:1px solid #999;
+}
+.team_logo img{
+	float: left;
+}
+.team_logo h2{
+	margin-left: 20px;
+	float: left;
+}
+/* ===================content==================== */
+.content{
+	margin-left: 220px;
+	margin-right: 140px;
+	background-color: white;
+	border: 1px solid #999;
+	padding: 20px;
+}
+.content:hover{
+	height: 700px;
+}
+/* ===================mem_logo=================== */
+.mem_logo{
+	width: 120px;
+	float: right;
+	background-color: white;
+	border: 1px solid #999;
+}
+.mem_logo img{
+	display: block;
+	margin:20px;
+}
